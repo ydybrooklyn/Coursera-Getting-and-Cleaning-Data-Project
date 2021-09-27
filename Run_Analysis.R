@@ -22,8 +22,8 @@ features <- read.table("C:/Users/Diana/Documents/R/UCI HAR Dataset/features.txt"
 #(2) Extract only the data on mean and standard deviation in features.
 mean_std <- grep("mean\\(\\)|std\\(\\)", features[,2])
 mean_std_labels <- features[mean_std,2]
-mean_std_labels = gsub('-mean', 'Mean', mean_std_labels)
-mean_std_labels = gsub('-std', 'Std', mean_std_labels)
+mean_std_labels <- gsub('-mean', 'Mean', mean_std_labels)
+mean_std_labels <- gsub('-std', 'Std', mean_std_labels)
 mean_std_labels <- gsub('[-()]', '', mean_std_labels)
 
 #3.Uses descriptive activity names to name the activities in the data set
