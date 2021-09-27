@@ -29,7 +29,7 @@ mean_std_labels <- gsub('[-()]', '', mean_std_labels)
 #3.Uses descriptive activity names to name the activities in the data set
 
 #(1) Assign the labels on top of the columns in descriptive way.
-colnames(train_test) <- c("subject N.", "activity N.", features_left_labels)
+colnames(train_test) <- c("subject N.", "activity N.", mean_std_labels)
 
 #4.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 train_test_2nd <- aggregate(. ~subject + activity, train_test, mean)
